@@ -125,8 +125,6 @@ Solana Program Derived Addresses
 
 SPL Token Program
 
-License
-MIT or other license here
 
 Deliverables:
 
