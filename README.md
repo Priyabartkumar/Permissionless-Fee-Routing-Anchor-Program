@@ -1,3 +1,24 @@
+├── .gitignore
+├── .prettierignore
+├── Anchor.toml
+├── Cargo.lock
+├── Cargo.toml
+├── README.md
+├── migrations
+    └── deploy.ts
+├── package-lock.json
+├── package.json
+├── programs
+    └── honorary_fee_module
+    │   ├── Cargo.toml
+    │   ├── Xargo.toml
+    │   └── src
+    │       └── lib.rs
+├── tests
+    └── honorary_fee_module.ts
+├── tsconfig.json
+└── yarn.lock
+
 Permissionless Fee Routing Anchor Program
 Overview-
 This Anchor-compatible Solana program provides a permissionless module for fee routing and investor distribution. 
