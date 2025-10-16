@@ -38,26 +38,25 @@
   <li>yarn.lock</li>
 </ul>
 
-         </B>
 </br>
 </BODY>
 
-Permissionless Fee Routing Anchor Program
-Overview-
-This Anchor-compatible Solana program provides a permissionless module for fee routing and investor distribution. 
-The program exposes clear instruction interfaces and account requirements, supporting end-to-end testing against cp-amm and Streamflow protocols via a local validator.
+<B>Permissionless Fee Routing Anchor Program</B>
 
-Setup
-Prerequisites:{Solana CLI (latest version)
-
+<li>This Anchor-compatible Solana program provides a permissionless module for fee routing and investor distribution.</li> 
+<li>The program exposes clear instruction interfaces and account requirements, supporting end-to-end testing against cp-amm and Streamflow protocols via a local validator.</li>
+<br>
+<B>Setup
+Prerequisites:
+<br>{Solana CLI (latest version)
 Anchor CLI
-
 Rust toolchain (stable)
+Node.js (for testing if required)}</B>
 
-Node.js (for testing if required)}
-
-#METHOD TO INSTALL
-Installation:{
+<br>
+<br>
+<b>METHOD TO INSTALL</b>
+<br>Installation:{
 bash,
 git clone https://github.com/Priyabartkumar/Permissionless-Fee-Routing-Anchor-Program.git,
 cd Permissionless-Fee-Routing-Anchor-Program,
@@ -76,29 +75,17 @@ Associated Token Accounts
 Treasury: SPL Token account used for incoming fees.
 
 Creator Quote ATA: Destination for remaining fees after distribution.
-
-#INSTRUCTION_INTERFACE{
+<br>
+<br>
+<b>#INSTRUCTION_INTERFACE</b>{
 1. initialize
 Purpose: Sets up policy, progress, and PDAs.
 
 Accounts:
-
-Signer (payer)
-
-Vault (input)
-
-InvestorFeePosOwner PDA (init)
-
-Quote mint
-
-Treasury (SPL Token)
-
-Creator Quote ATA
-
-Policy PDA (init)
-
-Progress PDA (init)
+{<span>Signer (payer)</span>, Vault (input), InvestorFeePosOwner PDA (init),Quote mint, Treasury(SPL Token), Creator Quote ATA, Policy PDA (init), Progress PDA (init)
 }
+
+
 
 System/Token Program
 
