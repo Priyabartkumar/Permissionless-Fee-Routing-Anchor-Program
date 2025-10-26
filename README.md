@@ -1,46 +1,3 @@
-<HTML>
-<BODY> 
-<br><ul>
-  <li>.gitignore</li>
-  <li>.prettierignore</li>
-  <li>Anchor.toml</li>
-  <li>Cargo.lock</li>
-  <li>Cargo.toml</li>
-  <li>README.md</li>
-  <li>migrations
-    <ul>
-      <li>deploy.ts</li>
-    </ul>
-  </li>
-  <li>package-lock.json</li>
-  <li>package.json</li>
-  <li>programs
-    <ul>
-      <li>honorary_fee_module
-        <ul>
-          <li>Cargo.toml</li>
-          <li>Xargo.toml</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>src
-    <ul>
-      <li>lib.rs</li>
-    </ul>
-  </li>
-  <li>tests
-    <ul>
-      <li>honorary_fee_module.ts</li>
-    </ul>
-  </li>
-  <li>tsconfig.json</li>
-  <li>yarn.lock</li>
-</ul>
-
-</br>
-</BODY>
-
 <B>Permissionless Fee Routing Anchor Program</B>
 
 <li>This Anchor-compatible Solana program provides a permissionless module for fee routing and investor distribution.</li> 
@@ -127,42 +84,24 @@ Tests simulate flow with cp-amm and Streamflow accounts, validating correct fee 
 
 Failure modes are covered, such as mismatched mints, zero base fees, arithmetic overflow, out-of-order pages, and idempotency checks.
 
-Policies
-Daily Cap: Maximum total payout per day to investors.
-
-Min Payout: Minimum lamports for any payout (dust is carried over).
-
-Investor Share BPS: Share for investors in basis points (1/100th of percent).
-
-Carry Lamports: Amount carried over to next distribution day.
+<B><U>Policies</U></B><li>
+<B>1)Daily Cap</B>: Maximum total payout per day to investors.     <B>2)Min Payout</B>: Minimum lamports for any payout (dust is carried over).
+<B>3)Investor Share BPS</B>: Share for investors in basis points (1/100th of percent).
+<B>4)Carry Lamports</B>: Amount carried over to next distribution day.
 
 Failure Modes
 Treasury Mint Mismatch: Prevents payouts if treasury account mint doesn't match policy.
 
-Quote Mint Mismatch: Prevents distribution to wrong quote mint.
-
-Base Fees Detected: Fails crank if base token fees present.
-
-Overflow: Checked arithmetic on payouts.
-
-Missing cp-amm Accounts: Requires integration accounts for CPI.
-
-Not In Active Day: Disallows crank when outside distribution window.
+1) Quote Mint Mismatch: Prevents distribution to wrong quote mint.       2) Base Fees Detected: Fails crank if base token fees present.
+3) Overflow: Checked arithmetic on payouts.                              4)Missing cp-amm Accounts: Requires integration accounts for CPI.
+5) Not In Active Day: Disallows crank when outside distribution window.
 
 Useful Resources
 Solana Anchor Docs
-
 Solana Program Derived Addresses
-
 SPL Token Program
 
 
-Deliverables:
 
-All code and tests in this repo.
-
-Detailed inline comments.
-
-This README.md describes setup, wiring, PDAs, policies, and failure modes.a a local validator.
 
 
